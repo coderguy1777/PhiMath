@@ -16,4 +16,4 @@ class Point3D:
     def get_z(self):
         return self.z
     def get_group(self):
-        return list(self.get_x(), self.get_y(), self.get_z())
+        return list([self.get_x(), self.get_y(), self.get_z()])
