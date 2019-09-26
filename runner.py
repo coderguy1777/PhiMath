@@ -1,8 +1,8 @@
-import phimath.linear_alg.translate_vector as vc
-from phimath.vectors.point2d import Point2D
+from phimath.linear_alg.vectors.point2d import Point2D
+from phimath.linear_alg.vectors.vector2 import Vec2
 
 b = Point2D(8, 8)
-a = vc.Vec(0.5, 0.5)
+a = Vec2(0.5, 0.5)
 for i in range(0, 100):
     a.trans_x()
     print(str(a.get_x()))

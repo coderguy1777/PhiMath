@@ -25,11 +25,15 @@ class Vec3:
         self.vec = self.mult_vec(self.vec, vecb)
         return self.vec.get_group()
     
-    def vec_scalar(self, scalar):
+    def mult_scalar(self, scalar):
         self.vec.change_x(self.vec.get_x() * scalar)
         self.vec.change_y(self.vec.get_y() * scalar)
         self.vec.change_z(self.vec.get_z() * scalar)
         return self.vec.get_group()
+
+    def div_scalar(self, scalar):
+        self.vec.change_x(self.vec.get_x() * scalar)
+        self.vec.change_y
 
     def vec_mag(self):
         return math.sqrt(pow(self.vec.get_x(), 2) + pow(self.vec.get_y(), 2) + pow(self.vec.get_z(), 2))
