@@ -1,4 +1,4 @@
-from phimath.vectors.point3d import Point3D
+from phimath.linear_alg.vectors.point3d import Point3D
 import math
 
 class Vec3:
