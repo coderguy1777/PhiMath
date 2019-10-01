@@ -31,3 +31,8 @@ class Vec2:
 
     def vec_mag(self, vec_mag=Point2D):
         return math.sqrt(math.pow(vec_mag.get_x()) + math.pow(vec_mag.get_y()))
+
+    def vec_angle(self, vec_a=Point2D):
+        return math.tanh(vec_a.get_y()/vec_a.get_x())
+
+    
