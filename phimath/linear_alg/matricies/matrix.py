@@ -4,7 +4,7 @@ class Matrix:
     def __init__(self, row_size, col_size):
         self.row_size = row_size
         self.col_size = col_size
-        self.matrix = self.matrix[[0]*self.col_size] * self.row_size
+        self.matrix = [[0 for x in range(row_size)] for y in range(col_size)]
 
     def get_row_size(self):
         return self.row_size
@@ -18,7 +18,7 @@ class Matrix:
         col_error = col if col < self.get_col_size() or col > self.get_col_size() else False
         if row_error or col_error:
             raise ValueError("SELCTION_ERROR_PHI_MATH_MATRIX_VALUE")
-        if not(row_error) or not(col_error):
+        else:
             value_mat = self.matrix[row][col]
         return value_mat
 
