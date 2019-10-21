@@ -52,6 +52,12 @@ class Vec3:
         self.vec.change_y(self.vec.get_y() / scalar)
         self.vec.change_z(self.vec.get_z() / scalar)
         return self.vec.get_group()
+    
+    def normalize_vec(self):
+        self.vec.change_x(self.vec.get_x() / self.vec_mag())
+        self.vec.change_y(self.vec.get_y() / self.vec_mag())
+        self.vec.change_z(self.vec.get_z() / self.vec_mag())
+        return self.vec.get_group()
 
     def vec_mag(self):
         return math.sqrt(pow(self.vec.get_x(), 2) + pow(self.vec.get_y(), 2) + pow(self.vec.get_z(), 2))

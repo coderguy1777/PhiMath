@@ -45,6 +45,11 @@ class Vec2:
         self.vec_pt.change_y(self.vec_pt.get_y() * scalar)
         return self.vec_pt.get_group()
 
+    def normalize_vec2(self):
+        self.vec_pt.change_x(self.vec_pt.get_x() / self.vec_mag())
+        self.vec_pt.change_y(self.vec_pt.get_y() / self.vec_mag())
+        return self.vec_pt.get_group()
+
     def vec_mag(self, vec_mag=Point2D):
         return math.sqrt(math.pow(vec_mag.get_x()) + math.pow(vec_mag.get_y()))
 

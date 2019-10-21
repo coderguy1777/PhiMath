@@ -21,5 +21,25 @@ class Matrix:
         else:
             value_mat = self.matrix[row][col]
         return value_mat
+    
+    def get_matrix_row(self, row):
+        row_vals = []
+        if row > self.get_row_size():
+            raise ValueError("ROW_VAL_ERROR")
+        else:
+            for i in range(row):
+                row_vals.append(self.matrix[i][0])
+        return row_vals
+    
+    def get_matrix_column(self, col):
+        col_vals = []
+        if col > self.get_col_size():
+            raise ValueError("COL_VAL_ERROR")
+        else:
+            for i in range(col):
+                col_vals.append(self.matrix[0][i])
+        return col_vals
+
+    
 
     
