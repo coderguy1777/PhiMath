@@ -39,7 +39,4 @@ class Matrix:
             for i in range(col):
                 col_vals.append(self.matrix[0][i])
         return col_vals
-
-    
-
     
