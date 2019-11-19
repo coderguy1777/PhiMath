@@ -40,3 +40,10 @@ class Matrix:
                 col_vals.append(self.matrix[0][i])
         return col_vals
     
+    def set_matrix_value(self, row, column, value):
+        if row > self.get_row_size() or column > self.get_col_size():
+            raise ValueError("ROW SELECTION IS TOO BIG, OR COLUMN SELETION")
+        else:
+            print("Matrix values for mat set.")
+            self.matrix[row][column] = value
+        
